@@ -31,30 +31,30 @@ const createCashOrder = catchError(async (req, res, next) => {
     res.send({ msg: 'success', order })
 })
 const getallOrders = catchError(async (req, res, next) => {
-    let apiFeature = new ApiFeature(orderModel.find().populate('orderItem.product'),req.query)
-    .pagenation().fields().search().sort().filter()
+    let apiFeature = new ApiFeature(orderModel.find().populate('orderItem.product'), req.query)
+        .pagenation().fields().search().sort().filter()
     let order = await apiFeature.mongoseQuery
     if (!order) return next(new AppError('order not founded', 404))
     res.send({ msg: 'success', order })
 })
 const getSpcificOrder = catchError(async (req, res, next) => {
-    let order = await orderModel.findOne({user:req.user._id}).populate('orderItem.product')
+    let order = await orderModel.findOne({ user: req.user._id }).populate('orderItem.product')
     if (!order) return next(new AppError('order not founded', 404))
     res.send({ msg: 'success', order })
 })
 
-const createCheckOutSession = catchError(async(req,res,next)=>{
+const createCheckOutSession = catchError(async(req, res, next) => {
     let cart = await cartModel.findById(req.params.id)
     if (!cart) return next(new AppError('cart not founded', 404))
     let totalOrderPrice = cart.totalpriceAfterDiscount ? cart.totalpriceAfterDiscount : cart.totalprice
-    const session = await stripe.checkout.sessions.create({      
+    const session = await stripe.checkout.sessions.create({
         line_items: [
             {
                 price_data: {
-                    currency:'egp',
-                    unit_amount:totalOrderPrice * 100 ,
-                    product_data:{
-                        name:req.user.name
+                    currency: 'egp',
+                    unit_amount: totalOrderPrice * 100,
+                    product_data: {
+                        name: req.user.name
                     }
                 },
                 quantity: 1,
@@ -63,16 +63,41 @@ const createCheckOutSession = catchError(async(req,res,next)=>{
         mode: 'payment',
         success_url: 'https://www.linkedin.com/in/islammuhaamed/',
         cancel_url: 'https://www.linkedin.com/in/islammuhaamed/',
-        customer_email:req.user.email,
-        client_reference_id:req.params.id,
-        metadata:req.body.shippingAddress
+        customer_email: req.user.email,
+        client_reference_id: req.params.id,
+        metadata: req.body.shippingAddress
     });
-    res.send({msg:"success",session})
+    res.send({ msg: "success", session })
+})
+const createOnlineOrder = catchError(  (request, response) => {
+    const sig = request.headers['stripe-signature'].toString();
+
+    let event;
+
+    try {
+        event = stripe.webhooks.constructEvent(request.body, sig, whsec_5RTQ4zCeaVhRPn65NTzpYxfAZ91FGyuH);
+    } catch (err) {
+        response.status(400).send(`Webhook Error: ${err.message}`);
+        return;
+    }
+
+    // Handle the event
+    if (event.type == "checkout.session.completed") {
+        const checkoutSessionCompleted = event.data.object;
+        console.log("create Order here...");
+    } else {
+        console.log(`Unhandled event type ${event.type}`);
+
+    }
+
+    // Return a 200 response to acknowledge receipt of the event
+    response.send();
 })
 
 export {
     createCashOrder,
     getallOrders,
     getSpcificOrder,
-    createCheckOutSession
+    createCheckOutSession,
+    createOnlineOrder
 }
