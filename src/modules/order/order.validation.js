@@ -13,5 +13,4 @@ const createCashOrderVal = joi.object({
 
 export {
     createCashOrderVal,
-
 }

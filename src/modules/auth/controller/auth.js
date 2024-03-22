@@ -21,7 +21,7 @@ const signUp = catchError(async (req, res, next) => {
 const signIn = catchError(async (req, res, next) => {
     let { email, password } = req.body
     let checkEmail = await userModel.findOne({ email })
-    if (!checkEmail) return next(new AppError('emial Not Founded'))
+    if (!checkEmail) return next(new AppError('emial Not Founded',404))
     else {
         let checkPassword = bcrypt.compareSync(password, checkEmail.password)
         if (!checkPassword) return next(new AppError('passwor incorrect', 401))

@@ -1,0 +1,2071 @@
+{
+	"info": {
+		"_postman_id": "4f360832-4954-4817-aec0-de4b35c6d530",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30513084"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Electronics",
+									"type": "text"
+								},
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/D:/Back-End/Route/Ecommerce Project/ecom img -/category/Electronics.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/65ec9192e7fe10f11d25afa6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"65ec9192e7fe10f11d25afa6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/D:/Back-End/Route/Ecommerce Project/ecom img -/category/Baby & Toys.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/65ecaf0b6e1cb41d62ebbea7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"65ecaf0b6e1cb41d62ebbea7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/categories/65ed93e9eb1e29bcfdb13a79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"65ed93e9eb1e29bcfdb13a79"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub Category",
+			"item": [
+				{
+					"name": "Add Sub Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Historical",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "65ed94e4eb1e29bcfdb13a8d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/subCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Sub Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/subCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"subCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get singleSub Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/subCategories/65ed9a09dc93621024c80a18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"subCategories",
+								"65ed9a09dc93621024c80a18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Sub Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ay7agaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/subCategories/65ed9a09dc93621024c80a18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"subCategories",
+								"65ed9a09dc93621024c80a18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sub Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/subCategories/65ed9a09dc93621024c80a18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"subCategories",
+								"65ed9a09dc93621024c80a18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"amazing tv\",\r\n    \"product\":\"65edd531a8c9e59a0059a55f\",\r\n    \"rate\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Review",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single Review",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRhZDY0MTdiMGRkNDcwYTZlODQ5MGMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg4NjM2MzF9.DnWm0uHzEJrF4_GryMVCJipKntMze_wgGiVFhTCAidc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/review/65eddbdfd5bfd365676e7c38",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"review",
+								"65eddbdfd5bfd365676e7c38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Review",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rate\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/review/65eddbdfd5bfd365676e7c38",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"review",
+								"65eddbdfd5bfd365676e7c38"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/review/65eddbdfd5bfd365676e7c38",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"review",
+								"65eddbdfd5bfd365676e7c38"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupon",
+			"item": [
+				{
+					"name": "Add Coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"this is coupon\",\r\n    \"discount\":10,\r\n    \"expire\":\"2024-3-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Coupon",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/coupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single coupon",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/coupon/65ede522b9fd16b184e4a383",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"coupon",
+								"65ede522b9fd16b184e4a383"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Coupon",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"this is coupon brdoo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/coupon/65ede522b9fd16b184e4a383",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"coupon",
+								"65ede522b9fd16b184e4a383"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete coupon",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/coupon/65dc52c5c0c314f86f1f7609",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"coupon",
+								"65dc52c5c0c314f86f1f7609"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "Add to cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"65edd531a8c9e59a0059a55f\" ,\r\n    \"quantity\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove item from cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/cart/65edd531a8c9e59a0059a55f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								"65edd531a8c9e59a0059a55f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update quantity",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/cart/65edd531a8c9e59a0059a55f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								"65edd531a8c9e59a0059a55f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"this is coupon brdoo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"cart"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRhZDY0MTdiMGRkNDcwYTZlODQ5MGMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg4NjM2MzF9.DnWm0uHzEJrF4_GryMVCJipKntMze_wgGiVFhTCAidc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applay Coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRhZDY0MTdiMGRkNDcwYTZlODQ5MGMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg4NjM2MzF9.DnWm0uHzEJrF4_GryMVCJipKntMze_wgGiVFhTCAidc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"this is coupon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/cart/applayCoupon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"cart",
+								"applayCoupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create cash order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU5ZjIyNTU4ODdhMWJlNzM4ZjkwYmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTgzMDY5M30.FYxsZpMed872ck296tg_jMKaHxw_hW8wwBspo1kizjo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"shippingAddress\":{ \r\n        \"street\":\"12 mostafa elkot street\",\r\n        \"city\":\"alexandria\",\r\n        \"phone\":\"+201204877915\"\r\n       }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/order/65ea96b8ae3b1824215c7c3c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"65ea96b8ae3b1824215c7c3c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create checkout session",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"shippingAddress\":{ \r\n        \"street\":\"12 mostafa elkot street\",\r\n        \"city\":\"alexandria\",\r\n        \"phone\":\"+201204877915\"\r\n       }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/order/checkout/65ede61aa3263fc3eebdb730",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"checkout",
+								"65ede61aa3263fc3eebdb730"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Ordre",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU5ZjIyNTU4ODdhMWJlNzM4ZjkwYmEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTgzMDY5M30.FYxsZpMed872ck296tg_jMKaHxw_hW8wwBspo1kizjo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"this is coupon brdoo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/order/allOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"order",
+								"allOrder"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wishList",
+			"item": [
+				{
+					"name": "add To wish List",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":\"65edd5d2a8c9e59a0059a563\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/wishList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"wishList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove from wish List",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/wishList/65edd5d2a8c9e59a0059a563",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"wishList",
+								"65edd5d2a8c9e59a0059a563"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get WishedList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRhZDY0MTdiMGRkNDcwYTZlODQ5MGMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg4NjM2MzF9.DnWm0uHzEJrF4_GryMVCJipKntMze_wgGiVFhTCAidc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/wishList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"wishList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "add address",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"streat\":\"12 mostafa elkot\",\r\n    \"phone\":\"01204877915\",\r\n    \"city\":\"alexandria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove address",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRhZDY0MTdiMGRkNDcwYTZlODQ5MGMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDg4NjM2MzF9.DnWm0uHzEJrF4_GryMVCJipKntMze_wgGiVFhTCAidc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/address/65dc40ef8bdbe43fef9fea78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"address",
+								"65dc40ef8bdbe43fef9fea78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get adresses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"address"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "Add Brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Essence",
+									"type": "text"
+								},
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/D:/Back-End/Route/Ecommerce Project/ecom img -/brands/Essence.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/brand",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"brand"
+							],
+							"query": [
+								{
+									"key": " ",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ecommerce-api-node-js-9h20.onrender.com/api/v1/brand",
+							"protocol": "https",
+							"host": [
+								"ecommerce-api-node-js-9h20",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single Brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/brand/65eda67ea95105bd1397b055",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"brand",
+								"65eda67ea95105bd1397b055"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Brand",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/D:/Back-End/Route/Ecommerce Project/ecom img -/category/Books.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/brand/65eda67ea95105bd1397b055",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"brand",
+								"65eda67ea95105bd1397b055"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Brand",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/brand/65eda769950fea5f311e679d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"brand",
+								"65eda769950fea5f311e679d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Black Kochi",
+									"type": "text"
+								},
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/6c5785b2-9d82-40f9-9281-c81f41784760.jpg"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/8d292b17-68d8-44a4-bc05-a0c2fd5d7690.jpg",
+										"/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/733fb74c-1fc0-41a8-aff7-60fce095de92.jpg",
+										"/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/889d5ea5-0802-4878-a03f-d280ac283230.jpg",
+										"/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/936f5939-7719-4171-b61b-dc710ccc8f53.jpg",
+										"/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/91323b6f-88f8-4fca-81e4-b73c952c701d.jpg",
+										"/D:/Back-End/Route/Ecommerce Project/ecom img -/products/prod28/a2c315ed-6114-477e-b36b-79486e9dfe6f.jpg"
+									]
+								},
+								{
+									"key": "description",
+									"value": "ِAmazing Kochi",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1800",
+									"type": "text"
+								},
+								{
+									"key": "priceAfterDiscount",
+									"value": "1500",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "64089c0d24b25627a2531590",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "65ed9aca10d1ecf86b792f92",
+									"type": "text"
+								},
+								{
+									"key": "subCategory",
+									"value": "65ed94b7eb1e29bcfdb13a87",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"elctro & ay7agaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ecommerce-api-node-js-9h20.onrender.com/api/v1/product",
+							"protocol": "https",
+							"host": [
+								"ecommerce-api-node-js-9h20",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/65edcc6fcb24da2e27e064f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"65edcc6fcb24da2e27e064f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageCover",
+									"type": "file",
+									"src": "/D:/Back-End/Route/Ecommerce Project/ecom img -/brands/Apple.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/65edcc6fcb24da2e27e064f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"65edcc6fcb24da2e27e064f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/65edcc6fcb24da2e27e064f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"65edcc6fcb24da2e27e064f3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODIzZjExOGU1NmRlNTY5YzVmYzEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTk5ODY1NX0.Xdq1DaIeTMLKeehcjYFWGLUDu8OazR6WxpP4RF7DPLM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"islam\",\r\n    \"email\":\"islam@gmail.com\",\r\n    \"password\":\"Mohamed@123\",\r\n    \"rePassword\":\"Mohamed@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"amr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/65ec7fe10a9a7dc95fa61f70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65ec7fe10a9a7dc95fa61f70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODIzZjExOGU1NmRlNTY5YzVmYzEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTk5ODY1NX0.Xdq1DaIeTMLKeehcjYFWGLUDu8OazR6WxpP4RF7DPLM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/65ec83cb5f06753d62d66b9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65ec83cb5f06753d62d66b9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODhkM2U4YjY5NDBjZjVhZjNhYzYiLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDAwMDM0MH0.rgxtVGqFjhqhyIfbLo4o_-TrA1h2M6XuCmH3kLWWOpg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://ecommerce-api-node-js-9h20.onrender.com/api/v1/user",
+							"protocol": "https",
+							"host": [
+								"ecommerce-api-node-js-9h20",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODIzZjExOGU1NmRlNTY5YzVmYzEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTk5ODY1NX0.Xdq1DaIeTMLKeehcjYFWGLUDu8OazR6WxpP4RF7DPLM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/65ec83cb5f06753d62d66b9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"65ec83cb5f06753d62d66b9c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"islam\",\r\n    \"email\":\"islammohamed3235@gmail.com\",\r\n    \"password\":\"Islassm@123\",\r\n    \"rePassword\":\"Islam@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n \"email\":\"islammohamed3235@gmail.com\",\r\n    \"password\":\"Islam@124\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"islammmm@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/forgetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isVerify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjODIzZjExOGU1NmRlNTY5YzVmYzEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTk5ODY1NX0.Xdq1DaIeTMLKeehcjYFWGLUDu8OazR6WxpP4RF7DPLM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"G9F1X5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/verification",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"islammmm@gmail.com\",\r\n    \"newPassword\":\"Islam@1235\",\r\n    \"reNewPassword\":\"Islam@1235\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"islammmm@gmail.com\",\r\n    \"code\":\"KDCSg5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/checkCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"checkCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change Password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWVjN2ZlMTBhOWE3ZGM5NWZhNjFmNzAiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwOTk5ODA5MH0.09aauGNc3AiGpG_au4fMM68d05Hhr9-GhkLJO2-2XGE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"oldPassword\":\"Islam@123\",\r\n    \"newPassword\":\"Islam@124\",\r\n    \"reNewPassword\":\"Islam@124\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/changedPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"changedPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -6,7 +6,7 @@ import { catchError } from '../../../middleware/catchError.js'
 import { AppError } from '../../../utils/AppError.js'
 import { ApiFeature } from '../../../utils/apiFeatur.js'
 import Stripe from 'stripe';
-const stripe = new Stripe(process.env.Secret_Stripe);
+const stripe = new Stripe('sk_test_51OrwJRCWdWW6cS4fLPRZtRX528YSClxGTEZ9YKdLLqGh0vCGeUA0Q6hIbv7Tiilu9regkjDrBi1vObSFG9EFURhx000Taq17zi');
 
 const createCashOrder = catchError(async (req, res, next) => {
     let cart = await cartModel.findById(req.params.id)
@@ -28,7 +28,7 @@ const createCashOrder = catchError(async (req, res, next) => {
         })
     })
     await productModel.bulkWrite(options)
-    await cartModel.findOneAndDelete({user:req.user._id})
+    await cartModel.findOneAndDelete({ user: req.user._id })
     res.send({ msg: 'success', order })
 })
 const getallOrders = catchError(async (req, res, next) => {
@@ -70,13 +70,14 @@ const createCheckOutSession = catchError(async (req, res, next) => {
     });
     res.send({ msg: "success", session })
 })
+
 const createOnlineOrder = catchError((request, response) => {
     const sig = request.headers['stripe-signature'].toString();
 
     let event;
     event = stripe.webhooks.constructEvent(request.body, sig, "whsec_5RTQ4zCeaVhRPn65NTzpYxfAZ91FGyuH");
     if (event.type == "checkout.session.completed") {
-        card(event.data.object,response)
+        card(event.data.object, response)
         console.log("create Order here...");
     } else {
         console.log(`Unhandled event type ${event.type}`);
@@ -129,6 +130,6 @@ async function card(e, res) {
         res.send({ msg: 'success', order });
     } catch (error) {
         console.error('Error processing checkout:', error);
-        throw error; 
+        throw error;
     }
 }
