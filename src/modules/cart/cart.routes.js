@@ -15,7 +15,7 @@ cartRouter
     .get(protectedRouter,  isVerify,allowedTo('user'), getLoggedUSerCart)
     .delete(protectedRouter, isVerify, allowedTo('user'), clearUSerCart)
 
-cartRouter.post('/applayCoupon', isVerify, validation(applayCouponVal), protectedRouter, allowedTo('user'), applayCoupon)
+cartRouter.post('/applayCoupon',protectedRouter, isVerify, validation(applayCouponVal),  allowedTo('user'), applayCoupon)
 
 cartRouter
     .route('/:id')
