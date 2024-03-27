@@ -17,7 +17,7 @@ orderRouter.get('/allOrder',protectedRouter,allowedTo('admin'),getallOrders)
 .route('/:id')
 .post(protectedRouter, isVerify,allowedTo('user'),validation(createCashOrderVal),createCashOrder)
 
-orderRouter.post('/checkout/:id', isVerify,protectedRouter,allowedTo('user'),validation(createCashOrderVal),createCheckOutSession)
+orderRouter.post('/checkout/:id',protectedRouter, isVerify,allowedTo('user'),validation(createCashOrderVal),createCheckOutSession)
 
 
 export default orderRouter
