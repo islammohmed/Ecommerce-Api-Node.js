@@ -10,7 +10,7 @@ export function sendEmail(verifyCode, email) {
     });
     async function main() {
         const info = await transporter.sendMail({
-            from: '"Travel Account verify" <islammohamed3235@gmail.com>', // sender address
+            from: '"E-commerce Account verify" <islammohamed3235@gmail.com>', // sender address
             to: email, // list of receivers
             subject: "Welcome", // Subject line
             text: `Your verify code is ${verifyCode} `, // plain text body
