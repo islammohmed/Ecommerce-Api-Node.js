@@ -2,7 +2,7 @@
 import joi from 'joi'
 const addToCartVal = joi.object({
     product: joi.string().hex().length(24).required(),
-    quantity: joi.number().integer().optional({ convert: false }).required(),
+    quantity: joi.number().integer().optional({ convert: false }).optional(),
     price: joi.number(),
 })
 const paramValidation = joi.object({
