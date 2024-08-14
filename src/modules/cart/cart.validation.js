@@ -10,7 +10,7 @@ const paramValidation = joi.object({
 })
 const updatequantityVal = joi.object({
     id: joi.string().hex().length(24).required(),
-    quantity: joi.number().integer().optional({ convert: false }).required()
+    quantity: joi.number().integer().optional({ convert: false }).optional()
 })
 const applayCouponVal = joi.object({
     code: joi.string().min(1).max(200).trim().required()
