@@ -10,11 +10,11 @@ import { globalError } from './src/middleware/globalError.js'
 import { createOnlineOrder } from './src/modules/order/controller/order.js'
 import { rateLimit } from 'express-rate-limit'
 const app = express()
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100
-});
-app.use(limiter)
+// const limiter = rateLimit({
+//     windowMs: 15 * 60 * 1000, // 15 minutes
+//     max: 1000
+// });
+// app.use(limiter)
 dbConnection()
 config()
 app.use(cors())
@@ -24,7 +24,7 @@ app.use(express.json())
 app.use('/uploads', express.static('uploads'))
 bootstrab(app)
 app.use('*', (req, res, next) => {
-    next(new AppErronoder('url not founded', 404))
+    next(new AppError('url not founded', 404))
 })
 app.use(globalError)
 const port = 3000
