@@ -34,7 +34,7 @@ const addReview = catchError(async (req, res, next) => {
 
 
 const getAllreview = catchError(async (req, res, next) => {
-    let apiFeature = new ApiFeature(reviewModel.find({}), req.query).fields().pagenation().sort().filter().search('text')
+    let apiFeature = new ApiFeature(reviewModel.find({}), req.query).fields().pagenation(5).sort().filter().search('text')
     let review = await apiFeature.mongoseQuery
     !review && next(new AppError('review not found', 404))
     review && res.send({ msg: 'success', page: apiFeature.pageNumber, review })

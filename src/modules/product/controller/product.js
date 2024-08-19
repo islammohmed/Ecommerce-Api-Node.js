@@ -31,7 +31,7 @@ const addProduct = catchError(async (req, res, next) => {
 
 });
 const getAllProduct = catchError(async (req, res, next) => {
-    let apiFeaturee = new ApiFeature(productModel.find().populate('myReviews'), req.query).fields().pagenation().sort().filter().search('title', 'description')
+    let apiFeaturee = new ApiFeature(productModel.find().populate('myReviews'), req.query).fields().pagenation(25).sort().filter().search('title', 'description')
     let product = await apiFeaturee.mongoseQuery
     !product && next(new AppError('Product not found', 404))
     product && res.send({ msg: 'success', page: apiFeaturee.pageNumber, product })

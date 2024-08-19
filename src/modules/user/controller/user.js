@@ -25,7 +25,7 @@ const deleteUser = catchError(async (req, res, next) => {
 
 const getUsers = catchError(async (req, res, next) => {
     let apiFeature = new ApiFeature(userModel.find(), req.query)
-        .pagenation().fields().search('name','email').sort().filter()
+        .pagenation(10).fields().search('name', 'email').sort().filter()
     let users = await apiFeature.mongoseQuery
     res.send({ msg: "success", pageNumber: apiFeature.pageNumber, users })
 })

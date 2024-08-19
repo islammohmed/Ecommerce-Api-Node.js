@@ -18,7 +18,7 @@ const addBrand = catchError(async (req, res, next) => {
     brand && res.send({ msg: 'success', brand })
 })
 const getAllBrand = catchError(async (req, res, next) => {
-    let apiFeature = new ApiFeature(brandModel.find(), req.query).fields().pagenation().sort().filter().search()
+    let apiFeature = new ApiFeature(brandModel.find(), req.query).fields().pagenation(15).sort().filter().search()
     let brand = await apiFeature.mongoseQuery
     !brand && next(new AppError('Brand not found', 404))
     brand && res.send({ msg: 'success', page: apiFeature.pageNumber, brand })
@@ -31,7 +31,7 @@ const getSingleBrand = catchError(async (req, res, next) => {
 })
 const updateBrand = catchError(async (req, res, next) => {
     let updatePhoto = await brandModel.findById(req.params.id)
-    if(!updatePhoto) return next(new AppError('photo not founded'))
+    if (!updatePhoto) return next(new AppError('photo not founded'))
     if (req.file) {
         let publicId = updatePhoto.imageCover.split('/').pop().split('.')[0]
         console.log(publicId);

@@ -33,7 +33,7 @@ const createCashOrder = catchError(async (req, res, next) => {
 })
 const getallOrders = catchError(async (req, res, next) => {
     let apiFeature = new ApiFeature(orderModel.find().populate('orderItem.product'), req.query)
-        .pagenation().fields().search().sort().filter()
+        .pagenation(15).fields().search().sort().filter()
     let order = await apiFeature.mongoseQuery
     if (!order) return next(new AppError('order not founded', 404))
     res.send({ msg: 'success', order })

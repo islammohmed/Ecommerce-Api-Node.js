@@ -17,7 +17,7 @@ const addCategory = catchError(async (req, res, next) => {
     category && res.send({ msg: 'success', category })
 })
 const getAllCategory = catchError(async (req, res, next) => {
-    let apiFeature = new ApiFeature(categoryModel.find(), req.query).fields().pagenation().sort().filter().search('name')
+    let apiFeature = new ApiFeature(categoryModel.find(), req.query).fields().pagenation(15).sort().filter().search('name')
     let category = await apiFeature.mongoseQuery
     !category && next(new AppError('category not found', 404))
     category && res.send({ msg: 'success', page: apiFeature.pageNumber, category })

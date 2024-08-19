@@ -15,7 +15,7 @@ const getAllSubCategory = catchError(async (req, res, next) => {
     if (req.params.category) {
         filterObject.category = req.params.category
     }
-    let apiFeature = new ApiFeature(subCategoryModel.find(filterObject), req.query).fields().pagenation().sort().filter().search('name')
+    let apiFeature = new ApiFeature(subCategoryModel.find(filterObject), req.query).fields().pagenation(15).sort().filter().search('name')
     let subCategory = await apiFeature.mongoseQuery
     !subCategory && next(new AppError('subCategory not found', 404))
     subCategory && res.send({ msg: 'success', page: apiFeature.pageNumber, subCategory })
