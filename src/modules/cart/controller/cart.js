@@ -60,7 +60,9 @@ const updatequantity = catchError(async (req, res, next) => {
 const getLoggedUSerCart = catchError(async (req, res, next) => {
     let cart = await cartModel.findOne({ user: req.user._id }).populate('cartItem.product')
     !cart && next(new AppError('cart not found', 404))
-    cart && res.send({ msg: 'success', cart })
+    let cartNumber = cart.cartItem.length;
+
+    cart && res.send({ msg: 'success', cart, cartNumber })
 })
 const clearUSerCart = catchError(async (req, res, next) => {
     let cart = await cartModel.findOneAndDelete({ user: req.user._id }).populate('cartItem.product')
