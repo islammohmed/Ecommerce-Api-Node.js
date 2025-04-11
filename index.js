@@ -27,7 +27,7 @@ app.use('*', (req, res, next) => {
     next(new AppError('url not founded', 404))
 })
 app.use(globalError)
-const port = 3000
+const port = 8000
 app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${port}!`))
 
 process.on('unhandledRejection', (err) => {
